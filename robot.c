@@ -31,16 +31,19 @@ void robotPrintMessage(void)
 void robotPrintAscii(void)
 {
   int i;
-  char* blank = "                              ";
-  blank = blank +30;
-  printf("\n\n"
-	 "UWR: Unidentified Wheeled Robot\n"
-	 "%s    i_i    \n"
-	 "%s   [@_*]   \n"
-	 "%s  /|___|\\ \n"
-	 "%s   d   b   \n",blank, blank, blank, blank);
+  char* blank = "                                 ";
 
-  blank = blank - 10;
+  for(i=0; i<3; i++){
+
+  	blank = blank +4;
+  	printf("\n\n"
+		 "UWR: Unidentified Wheeled Robot\n"
+		 "%s    i_i    \n"
+		 "%s   [@_*]   \n"
+		 "%s  /|___|\\ \n"
+		 "%s   d   b   \n",blank, blank, blank, blank);
+	blank = blank -1;
+	}
 }
 
 /**
